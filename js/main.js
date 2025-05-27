@@ -7,12 +7,6 @@ const mostOrderedProducts = [
         description: 'Rich and bold espresso shot'
     },
     {
-        name: 'Caramel Frappuccino',
-        price: 'Rp 35.000',
-        image: 'https://images.unsplash.com/photo-1620303044792-44de5cc7fec3?w=500',
-        description: 'Blended coffee with caramel sauce'
-    },
-    {
         name: 'Cappuccino',
         price: 'Rp 30.000',
         image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500',

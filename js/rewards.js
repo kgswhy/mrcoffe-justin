@@ -99,71 +99,7 @@ function getRewardDetails(rewardType) {
     };
 }
 
-// Add Modal Styles
-function addModalStyles() {
-    const style = document.createElement('style');
-    style.textContent = `
-        .reward-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .reward-modal.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .modal-content {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            max-width: 500px;
-            width: 90%;
-            position: relative;
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-        }
-        
-        .reward-modal.show .modal-content {
-            transform: translateY(0);
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-color);
-        }
-        
-        .modal-content h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .app-download-prompt {
-            margin-top: 2rem;
-            text-align: center;
-        }
-        
-        .app-download-prompt .app-buttons {
-            margin-top: 1rem;
-        }
-    `;
-    document.head.appendChild(style);
-}
+
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {

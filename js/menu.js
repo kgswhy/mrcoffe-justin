@@ -3,21 +3,21 @@ const menuItems = [
     {
         name: 'Classic Espresso',
         price: 'Rp 25.000',
-        image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500',
+        image: 'https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=500',
         description: 'Rich and bold espresso shot',
         category: 'coffee'
     },
     {
         name: 'Caramel Frappuccino',
         price: 'Rp 35.000',
-        image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500',
+        image: 'https://images.unsplash.com/photo-1620303044792-44de5cc7fec3?w=500',
         description: 'Blended coffee with caramel sauce',
         category: 'coffee'
     },
     {
         name: 'Cappuccino',
         price: 'Rp 30.000',
-        image: 'https://images.unsplash.com/photo-1534687941688-651ccf1e2e8e?w=500',
+        image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500',
         description: 'Espresso with steamed milk and foam',
         category: 'coffee'
     },
@@ -31,7 +31,7 @@ const menuItems = [
     {
         name: 'Iced Latte',
         price: 'Rp 32.000',
-        image: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500',
+        image: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=500',
         description: 'Espresso with cold milk',
         category: 'coffee'
     },
@@ -39,7 +39,7 @@ const menuItems = [
         name: 'Mocha Frappuccino',
         category: 'frappe',
         price: 'Rp 38.000',
-        image: 'https://images.unsplash.com/photo-1579888944880-d98341245702?w=500',
+        image: 'https://images.unsplash.com/photo-1620303044792-44de5cc7fec3?w=500',
         description: 'Blended coffee with chocolate sauce'
     },
     {

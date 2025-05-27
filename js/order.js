@@ -4,28 +4,28 @@ const menuItems = [
         id: 1,
         name: 'Classic Espresso',
         price: 'Rp 25.000',
-        image: 'https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=500',
+        image: '/assets/espresso.jpeg',
         description: 'Rich and bold espresso shot'
     },
     {
         id: 2,
         name: 'Caramel Frappuccino',
         price: 'Rp 35.000',
-        image: 'https://images.unsplash.com/photo-1620303044792-44de5cc7fec3?w=500',
+        image: '/assets/caramel.jpg',
         description: 'Blended coffee with caramel sauce'
     },
     {
         id: 3,
         name: 'Cappuccino',
         price: 'Rp 30.000',
-        image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500',
+        image: '/assets/cappucino.jpeg',
         description: 'Espresso with steamed milk and foam'
     },
     {
         id: 4,
         name: 'Croissant',
         price: 'Rp 20.000',
-        image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500',
+        image: '/assets/croisant.jpeg',
         description: 'Buttery, flaky pastry'
     }
 ];

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - MR.COFFEE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="MR.COFFEE Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="rewards.html">Rewards</a>
+            <a href="about.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html" class="active">Order</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Order Header -->
+    <section class="order-header">
+        <h1>Place Your Order</h1>
+        <p>Fill in the details below to complete your order</p>
+    </section>
+
+    <!-- Order Form -->
+    <section class="order-form-section">
+        <form id="orderForm" class="order-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Delivery Address</label>
+                <textarea id="address" name="address" required></textarea>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Select Items</label>
+                <div class="menu-items">
+                    <!-- Menu items will be dynamically loaded here -->
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Add-ons</label>
+                <div class="add-ons">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="addons" value="extra-shot">
+                        Extra Shot (+Rp 5.000)
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="addons" value="whipped-cream">
+                        Whipped Cream (+Rp 3.000)
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="addons" value="caramel-syrup">
+                        Caramel Syrup (+Rp 4.000)
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Special Instructions</label>
+                <textarea id="notes" name="notes" placeholder="Any special requests or instructions?"></textarea>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-items">
+                    <!-- Summary items will be dynamically updated -->
+                </div>
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="totalPrice">Rp 0</span>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Place Order</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MR.COFFEE</h3>
+                <p>Making all taste coffee every day</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="rewards.html">Rewards</a>
+                <a href="about.html">About Us</a>
+                <a href="menu.html">Menu</a>
+                <a href="order.html">Order</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MR.COFFEE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/order.js"></script>
+</body>
+</html> 

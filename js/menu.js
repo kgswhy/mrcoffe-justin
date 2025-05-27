@@ -10,7 +10,7 @@ const menuItems = [
     {
         name: 'Caramel Frappuccino',
         price: 'Rp 35.000',
-        image: 'https://images.unsplash.com/photo-1620303044792-44de5cc7fec3?w=500',
+        image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500',
         description: 'Blended coffee with caramel sauce',
         category: 'coffee'
     },
@@ -39,14 +39,14 @@ const menuItems = [
         name: 'Mocha Frappuccino',
         category: 'frappe',
         price: 'Rp 38.000',
-        image: 'https://images.unsplash.com/photo-1620303044792-44de5cc7fec3?w=500',
+        image: 'https://images.unsplash.com/photo-1579888944880-d98341245702?w=500',
         description: 'Blended coffee with chocolate sauce'
     },
     {
         name: 'Pour Over Coffee',
         category: 'brewed',
         price: 'Rp 28.000',
-        image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500',
+        image: 'https://images.unsplash.com/photo-1447933601403-07fcbe16d735?w=500',
         description: 'Hand-brewed coffee with care'
     },
     {
@@ -112,20 +112,7 @@ const menuItems = [
         description: 'Espresso with hazelnut syrup and milk',
         category: 'coffee'
     },
-    {
-        name: 'Cheese Danish',
-        price: 'Rp 24.000',
-        image: 'https://images.unsplash.com/photo-1608198093002-ad4e505484ba?w=500',
-        description: 'Flaky pastry with cream cheese filling',
-        category: 'pastry'
-    },
-    {
-        name: 'Iced Americano',
-        price: 'Rp 29.000',
-        image: 'https://images.unsplash.com/photo-1551036663-1b057aa6f098?w=500',
-        description: 'Espresso with cold water',
-        category: 'coffee'
-    },
+    
     {
         name: 'Chocolate Cake',
         price: 'Rp 32.000',

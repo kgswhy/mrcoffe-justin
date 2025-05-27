@@ -78,4 +78,85 @@ const animateOnScroll = () => {
 };
 
 window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('load', animateOnScroll); 
+window.addEventListener('load', animateOnScroll);
+
+// Main functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements with animation classes
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        observer.observe(element);
+    });
+
+    // Product card hover effects
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px)';
+            card.style.boxShadow = 'var(--shadow-lg)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = 'var(--shadow-md)';
+        });
+    });
+
+    // Add loading animation to images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
+        });
+    });
+
+    // Smooth reveal for sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.add('animate-on-scroll');
+    });
+
+    // Add parallax effect to banner
+    const banner = document.querySelector('.banner');
+    if (banner) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            banner.style.backgroundPositionY = `${scrolled * 0.5}px`;
+        });
+    }
+
+    // Add active state to current page in navigation
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+
+    // Add hover effect to buttons
+    const buttons = document.querySelectorAll('.cta-button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.style.transform = 'translateY(-2px)';
+        });
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translateY(0)';
+        });
+    });
+}); 

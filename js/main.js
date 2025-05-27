@@ -3,25 +3,25 @@ const mostOrderedProducts = [
     {
         name: 'Classic Espresso',
         price: 'Rp 25.000',
-        image: 'https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=500',
+        image: '/assets/espresso.jpeg',
         description: 'Rich and bold espresso shot'
     },
     {
         name: 'Cappuccino',
         price: 'Rp 30.000',
-        image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500',
+        image: '/assets/cappucino.jpeg',
         description: 'Espresso with steamed milk and foam'
     },
     {
         name: 'Croissant',
         price: 'Rp 20.000',
-        image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500',
+        image: '/assets/croisant.jpeg',
         description: 'Buttery, flaky pastry'
     },
     {
         name: 'Iced Latte',
         price: 'Rp 32.000',
-        image: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=500',
+        image: '/assets/latte.jpg',
         description: 'Espresso with cold milk'
     }
 ];
@@ -157,6 +157,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         button.addEventListener('mouseleave', () => {
             button.style.transform = 'translateY(0)';
+        });
+    });
+});
+
+// Menu Filter Scroll Effect
+const menuFilter = document.querySelector('.menu-filter');
+if (menuFilter) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            menuFilter.classList.add('scrolled');
+        } else {
+            menuFilter.classList.remove('scrolled');
+        }
+    });
+}
+
+// Menu Filter Functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+const menuItems = document.querySelectorAll('.menu-item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const category = button.getAttribute('data-category');
+
+        menuItems.forEach(item => {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 100);
+            } else {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    item.style.display = 'none';
+                }, 300);
+            }
         });
     });
 }); 

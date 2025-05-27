@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.nav-links a');
 
     // Toggle mobile menu
-    hamburger.addEventListener('click', () => {
+        hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+            navLinks.classList.toggle('active');
         document.body.classList.toggle('menu-open');
-    });
+        });
 
     // Close mobile menu when clicking a link
     links.forEach(link => {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
-        }
+            }
 
         // Hide/show navbar on scroll
         if (currentScroll > lastScroll && currentScroll > 100) {
@@ -54,6 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     block: 'start'
                 });
             }
+            });
         });
-    });
 }); 

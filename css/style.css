@@ -46,6 +46,7 @@ body {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-top: 140px;
 }
 
 /* Typography Scale */
@@ -948,4 +949,136 @@ footer::before {
 
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
-.mt-3 { margin-top: 3rem; } 
+.mt-3 { margin-top: 3rem; }
+
+/* Menu Filter Section */
+.menu-filter {
+    position: static !important;
+    top: unset !important;
+    left: unset !important;
+    width: 100%;
+    z-index: auto;
+    background: var(--white);
+    box-shadow: none;
+    border-radius: 0 0 30px 30px;
+    padding: 1.5rem 0;
+    margin: 0;
+}
+
+.menu-filter .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.filter-wrapper {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.filter-btn i {
+    font-size: 1.1rem;
+}
+
+.filter-btn:hover {
+    background-color: var(--gray-200);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--accent-color);
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.filter-btn.active:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive styles for menu filter */
+@media screen and (max-width: 768px) {
+    .menu-filter {
+        top: 70px;
+    }
+
+    .filter-buttons {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-filter {
+        top: 60px;
+    }
+
+    .filter-buttons {
+        gap: 0.25rem;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .filter-btn i {
+        font-size: 1rem;
+    }
+}
+
+/* App Download Buttons Responsive */
+.app-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .app-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    .app-button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px),
+       screen and (max-width: 768px),
+       screen and (max-width: 600px),
+       screen and (max-width: 480px) {
+  .menu-filter {
+    position: static !important;
+    top: unset !important;
+    left: unset !important;
+    box-shadow: none !important;
+    z-index: auto !important;
+  }
+} 
